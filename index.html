@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find your horoscope</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="horoscope.css">
+
+</head>
+
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="space.mp4" type="video/mp4">
+    </video>
+
+    <form class="row text-center align-items-center my-3 justify-content-center">
+        <label for="date" class="col-10 col-md-2 col-form-label m-1 fontBig">Birth date:</label>
+        <div class="col-10 col-md-4 m-1">
+            <div class="input-group date " id="datepicker">
+                <input type="date" class="form-control fontBig" id="date" />
+            </div>
+        </div>
+        <button type="button" class="btn col-10 col-md-2 m-1 fontBig">See your horoscope!</button>
+    </form>
+    <div class="container d-flex justify-content-center align-items-center my-2">
+        <div class="card col-12 col-md-8 col-xl-6 shadow result" id="default">
+            <img src="https://pittnews.com/wp-content/uploads/2022/01/O_Horoscopes_ST.png"
+                class="card-img-top img-fluid" alt="...">
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Aquarius">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/9c3f571e6c402e18129249a759a6a75f&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Aquarius</h3>After a long period of helping the people you love, it is perfectly okay to want to
+                put
+                yourself first today! There's no need to feel guilty. Instead, plan out your day with your happiness
+                as
+                your
+                only goal. Choose a nice variety of your favorite things, and toss in a little splurge here or there
+                just
+                for good measure. You've proved yourself to be a good friend and a good partner. Now it's time to
+                give
+                some
+                of that goodness to yourself!</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Aries">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/c1aa1b051d402cccbe7ae9ce5a697259&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Aries</h3>Controversy will be your ally today. It will create a nice, loud, distracting noise
+                that
+                will keep everyone busy -- and out of your hair! You will need all the elbow room and autonomy you
+                can
+                get today, as it's the perfect day to put new ideas to work. Get in some of that research, planning
+                or
+                organizing you need to do as early in the day as possible. By late afternoon, people could be
+                hovering
+                around you again, looking for the answers only you can give.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Cancer">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/2ca905d540012c34ce7534a1ec8fa187&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Cancer</h3>Other people have expectations of you right now, whether you like it or not. It's a fact,
+                and you should accept it -- and learn how to react to it. This isn't a situation in which you should
+                wait for orders to follow. You should take some initiative and show them that you're even more
+                outstanding than they are expecting you to be. You have some amazing talents that have only been hinted
+                at. This is a big chance to improve your (already stellar) reputation.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none"
+            id="Capricorn">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/5728ec4261b8db4917b4b9fab83457d0&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Capricorn</h3>When it becomes dramatically clear that you can't do it all today, you'll have to let
+                go of some of your obligations. But this is very good news -- and it will send a message to someone
+                powerful that you are not superhuman. Adjusting expectations is important, and doing so is sometimes
+                necessary if you want to keep harmony in your life. You'd do well to let go of some of your own
+                expectations of someone close to you. The fact that the two of you are not always on the same page isn't
+                a problem.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Gemini">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/384960dc716d4a6ee3c810ed165a60e6&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Gemini</h3>Today your energy is so bright and engaging that it's downright obnoxious -- so
+                naturally, the world will be taking special notice of you! Expect some advances from people who might
+                not care whether you are single or not. Put an end to any uncomfortable situations as soon as they
+                start. Silence may be seen as compliance, so be sure to speak up if you're feeling uncomfortable or
+                manipulated. The good news is that you are also attracting friends to spend more time with you. Get
+                ready for a reunion.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Leo">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/63bc7e31fc439157ea986ed78036e8a1&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Leo</h3>Acting your age won't feel like much fun today -- the children in your life are having a
+                great time, so why can't you? Asking this question will lead you to a realization that you can do
+                whatever you want to do! Take this attitude with you wherever you go today. You don't always have to be
+                willing to grow up in order to be in charge. The world could use some of your immature ideas, so lead by
+                example and have some fun. Laughter is a great way to get noticed.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Libra">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/6b06d3f405c4b6d61d6283faabdaa7c6&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Libra</h3>Sometimes the hardest thing to do in life is to do nothing at all. Taking your hands off
+                the steering wheel may seem like a dangerous thing to do, but in actuality right now it could be your
+                best tactic (not literally, of course!). Let things take their natural course at work, at school and in
+                a new relationship. You have less control over things than you think you do, so just admit that and take
+                yourself off the hook. You don't have to fix anything. It's the way it's meant to be.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Pisces">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/cabff07f32b5438999eff08201f4c9f1&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Pisces</h3>Today a small sacrifice on your part might be called for. Letting something leave your
+                life so you can make room for something else to come in is a difficult choice to make -- after all, how
+                can you be certain that what is coming will be better than what is leaving? Rely on your faith in the
+                people involved, and trust that they know what is best in this situation. If all else fails, just
+                remember that moving forward is better than standing still.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none"
+            id="Sagittarius">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/1f391b5912173023e4a633b7f05a908c&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Sagittarius</h3>There will be a lot of confusion around your communications today, so do what you
+                can to exchange your ideas clearly. Emails are more about convenience than they are about truly
+                connecting with another person. So if you are building a romance online, it's time to stop the back and
+                forth and schedule a good old-fashioned date. It's the only way to move things forward on solid footing.
+                You need to get someone's attention to finish a conversation that started a few days ago.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Scorpio">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/c5fb14099dc343309b4e04f5334351cf&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Scorpio</h3>When it comes to people pushing your buttons, enough is enough! If someone is getting on
+                your last nerve, today is the day to stop the madness. Do whatever you can to remove this person from
+                the picture -- even if it means you have to remove yourself from their environment. It might be a good
+                idea to get off on your own for a while, regardless. You could use a little time to slow down the pace
+                of your life and just watch the world swirl around you.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Taurus">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/a0161c85b99d3cff6e4107f5fc1e86c6&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Taurus
+                </h3>Today you might get a strong sense that something new is beginning -- but it might not quite be
+                what you were hoping for. Keep your hopes high, but do not bank on anything yet -- there is no such
+                thing as a sure thing. Renewal is in the air right now, and you can easily grab some of it to get your
+                own thing going if you stay dedicated. Whatever idea or scheme you've been playing with is more possible
+                than ever right now, so get with your people and start making things happen.</p>
+            </div>
+        </div>
+        <div class="card col-12 col-md-8 col-xl-6 shadow result animate__animated animate__fadeIn d-none" id="Virgo">
+            <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://www.washingtonpost.com/wp-stat/vg/2821cc59dbd1fdf85d296b70c3a4eaf1&w=750"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <p class="card-text">
+                <h3>Virgo</h3>A rude or unpleasant person will make your morning very interesting -- and give you a
+                fresh perspective on where you are in your life right now. This person offers an example of what not to
+                do... and seeing him or her in action will make you very grateful for the choices you have made in your
+                life. Your diplomacy will serve you well as you take stock of all the gifts you have. Extend a kind hand
+                to the people who use anger to hide their sadness.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="horoscope.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fontBig {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.row {
+    padding: 2em;
+    margin-bottom: 3em !important;
+}
+
+label {
+    color: aliceblue;
+    background-color: rgb(88, 100, 135);
+    border-radius: 5px;
+}
+
+.result {
+    background-color: rgb(248, 232, 213);
+}
+
+.btn {
+    color: aliceblue;
+    background-color: rgb(88, 100, 135);
+}
+
+.btn:hover,
+.btn:focus {
+    color: aliceblue;
+    background-color: rgb(90, 117, 201);
+    box-shadow: rgb(79, 127, 178) 0px 20px 30px -10px;
+}
+
+.animate__fadeIn {
+    animation-duration: 2s;
+}
